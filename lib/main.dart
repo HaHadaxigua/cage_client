@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
+
+import 'basic_widget.dart';
+import 'material_widget.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -8,30 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "Welcome to flutter",
-        home: Scaffold(
-          appBar: AppBar(
-            title: const Text("AppBar____Welcome to flutter"),
-          ),
-          body: const Center(
-            child: RandomWords(),
-          ),
-        ));
+      title: "Welcome to flutter",
+      home: const TutorialHome(),
+      theme: ThemeData.light(),
+    );
   }
 }
 
-// RandomWords 主要作用就是用来创建其状态类 State
-class RandomWords extends StatefulWidget {
-  const RandomWords({Key? key}) : super(key: key);
-
-  @override
-  _RandomWordsState createState() => _RandomWordsState();
-}
-
-class _RandomWordsState extends State<RandomWords> {
-  @override
-  Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
-    return Text(wordPair.asPascalCase);
-  }
-}
