@@ -1,4 +1,4 @@
-import 'package:cage/gesture_detector.dart';
+import 'package:cage/study/gesture_detector.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
